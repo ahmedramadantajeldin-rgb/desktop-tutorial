@@ -699,19 +699,11 @@
       });
     });
 
-    // ── Prevent default link navigation for demo safety;
-    //    cards still navigate normally in a real file system.
-    //    (Remove this block if you want straight-through navigation)
-    //
-    // If the linked sub-folder index.html files exist in the correct
-    // relative paths, clicking any card will open them directly.
-    // Folder map:
-    //   thermo3/index.html  ← Thermodynamics 3 dashboard
-    //   math302/index.html  ← MATH302 Numerical Methods
-    //   me307/index.html    ← Machine Design ME307
-    //   ge205/index.html    ← Engineering Economics GE205
-    //
-    // Adjust the href attributes above if your folder names differ.
+    // ── Folder map (relative to this index.html):
+    //   tageldien/index.html  ← Thermodynamics 3 dashboard
+    //   math302/index.html    ← MATH302 Numerical Methods
+    //   my-website/index.html ← Machine Design ME307
+    //   economy/index.html    ← Engineering Economics GE205
 
     // ── Subtle card parallax tilt on mouse move (desktop only)
     if (window.matchMedia('(pointer: fine)').matches) {
