@@ -30,6 +30,7 @@
       --c-math:       #2D5A8E;   /* deep blue */
       --c-mech:       #9A6B3A;   /* warm brown */
       --c-econ:       #8A7230;   /* old gold */
+      --c-tech:       #5C7866;   /* sage green */
 
       --radius:       12px;
       --shadow-card:  0 1px 4px rgba(24,22,15,.06), 0 6px 24px rgba(24,22,15,.08);
@@ -75,9 +76,10 @@
       background: linear-gradient(
         90deg,
         var(--c-thermo)  0%,
-        var(--c-math)   33%,
-        var(--c-mech)   66%,
-        var(--c-econ)  100%
+        var(--c-math)   25%,
+        var(--c-mech)   50%,
+        var(--c-econ)   75%,
+        var(--c-tech)  100%
       );
       flex-shrink: 0;
     }
@@ -256,6 +258,7 @@
     .subject-card:nth-child(2) { animation: riseIn .7s var(--ease-out-expo) .75s both; }
     .subject-card:nth-child(3) { animation: riseIn .7s var(--ease-out-expo) .85s both; }
     .subject-card:nth-child(4) { animation: riseIn .7s var(--ease-out-expo) .95s both; }
+    .subject-card:nth-child(5) { animation: riseIn .7s var(--ease-out-expo) 1.05s both; }
 
     /* accent left bar */
     .subject-card::before {
@@ -300,6 +303,7 @@
     .subject-card[data-accent="math"]   { --card-accent: var(--c-math);   }
     .subject-card[data-accent="mech"]   { --card-accent: var(--c-mech);   }
     .subject-card[data-accent="econ"]   { --card-accent: var(--c-econ);   }
+    .subject-card[data-accent="tech"]   { --card-accent: var(--c-tech);   }
 
     /* ── Card icon ── */
     .card-icon {
@@ -319,6 +323,7 @@
     .subject-card[data-accent="math"]   .card-icon { --icon-bg: rgba(45,90,142,.11);  }
     .subject-card[data-accent="mech"]   .card-icon { --icon-bg: rgba(154,107,58,.12); }
     .subject-card[data-accent="econ"]   .card-icon { --icon-bg: rgba(138,114,48,.12); }
+    .subject-card[data-accent="tech"]   .card-icon { --icon-bg: rgba(92,120,102,.12); }
 
     .subject-card:hover .card-icon {
       background: var(--card-accent) !important;
@@ -648,6 +653,26 @@
         <p class="card-desc">
           Annual Worth, Present Worth, depreciation, replacement analysis,
           and decision-making — from Blank &amp; Tarquin.
+        </p>
+        <span class="card-btn">
+          Open
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <!-- ⑤ Technical Writing -->
+      <a class="subject-card" data-accent="tech" href="https://ahmedramadantajeldin-rgb.github.io/techical/" target="_blank">
+        <div class="card-icon">
+          <!-- pen icon -->
+          <svg viewBox="0 0 24 24">
+            <path d="M12 20h9"/>
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+          </svg>
+        </div>
+        <span class="card-badge">HUM101 · Writing</span>
+        <h2 class="card-title">Technical Writing</h2>
+        <p class="card-desc">
+          Audience analysis, IMRaD format, research articles, and professional communication strategies.
         </p>
         <span class="card-btn">
           Open
